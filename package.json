@@ -1,6 +1,6 @@
 {
   "name": "vox-gltf",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Convert .vox files to .gltf",
   "type": "module",
   "author": "tasteink <hannahroksanne@gmail.com>",

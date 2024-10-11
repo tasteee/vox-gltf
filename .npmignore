@@ -1,0 +1,8 @@
+src
+.editorconfig
+.gitignore
+.prettierrc
+README.md
+tsconfig.json
+tsconfig.node.json
+
