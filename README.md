@@ -24,7 +24,7 @@ import { voxGltf } from 'vox-gltf'
 
 async function convertVoxFiles() {
   const conversions = [
-    // Paths will be treated with path.join(process.cwd(), <path>)
+    // You should provide absolute paths to your input and output files.
     { input: './models/kitten.vox', output: './models/kitten.gltf' },
     { input: './models/jetpack.vox', output: './models/jetpack.gltf' },
   ]

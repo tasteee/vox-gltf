@@ -7,7 +7,7 @@ import { Blob, FileReader } from 'vblob'
 import readVox from 'vox-reader'
 import fs from 'fs/promises'
 import fss from 'fs'
-import path from 'path'
+import { interpreter } from './interpreter.js'
 
 type RgbaValueT = {
   r: number
@@ -85,10 +85,12 @@ const createGeometry = (
     'position',
     new THREE.BufferAttribute(new Float32Array(vertices), 3),
   )
+
   geometry.setAttribute(
     'normal',
     new THREE.BufferAttribute(new Float32Array(normals), 3),
   )
+
   geometry.setAttribute(
     'color',
     new THREE.BufferAttribute(
@@ -96,6 +98,7 @@ const createGeometry = (
       3,
     ),
   )
+
   geometry.setIndex(new THREE.BufferAttribute(new Uint32Array(indices), 1))
 
   return geometry
@@ -149,8 +152,8 @@ const voxToGLTF = (options: OptionsT) => {
 
 export const voxGltf = async (options: MainOptionsT) => {
   try {
-    const inputPath = path.join(process.cwd(), options.input)
-    const outputPath = path.join(process.cwd(), options.output)
+    const inputPath = options.input;
+    const outputPath = options.output;
     const modelData = await fs.readFile(inputPath)
     const vox = readVox(modelData) as unknown as VoxelDataT
 
@@ -165,3 +168,5 @@ export const voxGltf = async (options: MainOptionsT) => {
     console.error('❌ Error in main:', error)
   }
 }
+
+export { interpreter }

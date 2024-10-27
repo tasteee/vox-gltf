@@ -12,6 +12,7 @@
     "importHelpers": true,
     "alwaysStrict": false,
     "strict": false,
+    "noImplicitOverride": false,
     "sourceMap": true,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,

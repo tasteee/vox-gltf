@@ -1,5 +1,6 @@
 src
 .editorconfig
+.vscode
 .gitignore
 .prettierrc
 README.md

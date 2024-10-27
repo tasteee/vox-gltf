@@ -1,9 +1,10 @@
 {
   "name": "vox-gltf",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Convert .vox files to .gltf",
   "type": "module",
   "author": "tasteink <hannahroksanne@gmail.com>",
+  "repository": "https://github.com/tasteee/vox-gltf",
   "license": "Apache-2.0",
   "scripts": {
     "dev": "tsx src/index.ts",
@@ -28,6 +29,7 @@
     "vitest": "2.1.2"
   },
   "dependencies": {
+    "chevrotain": "^11.0.3",
     "filereader": "0.10.3",
     "gltf-pipeline": "4.1.0",
     "ramda": "0.30.1",
